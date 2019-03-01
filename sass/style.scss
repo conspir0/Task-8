@@ -1,0 +1,32 @@
+// Default datas
+//-----------------------------------------------------
+$line-position: 60px;
+$line-width: 85px;
+$secondary-color: rgb(81, 154, 68);
+
+@mixin line {
+    position: absolute;
+    bottom: 0;
+    height: $line-position;
+    width: $line-width;
+    content: "";
+    border-bottom: 2px solid $secondary-color;
+}
+
+@mixin text {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+// RWD
+//-----------------------------------------------------
+@mixin mobile {
+    @media screen and (max-width: 574px) {
+        @content;
+    }
+}
+
+// CSS Files
+//-----------------------------------------------------
+@import "default";
+@import "header";
